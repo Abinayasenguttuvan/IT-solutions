@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - IT Portal</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: url("./signup.webp")
+            no-repeat center/cover fixed;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login-box {
+        width: 380px;
+        background: rgba(0,0,0,0.55);
+        padding: 35px;
+        border-radius: 15px;
+        backdrop-filter: blur(8px);
+        box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+        animation: fadeUp 1s ease-in-out;
+        color: #fff;
+    }
+
+    @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .login-box h2 {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 25px;
+        font-weight: 600;
+    }
+
+    .login-box input {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+        border: none;
+        border-radius: 8px;
+        margin-top: 10px;
+        background: #fff;
+        outline: none;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+        margin-top: 22px;
+        background: #00b7ff;
+        color: #fff;
+        border: none;
+        font-size: 17px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #0084c4;
+    }
+
+    .error-msg {
+        margin-top: 15px;
+        display: none;
+        background: #ff4d4d;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .links {
+        margin-top: 18px;
+        text-align: center;
+    }
+
+    .links a {
+        color: #ffeb3b;
+        text-decoration: none;
+        font-size: 15px;
+        display: block;
+        margin: 6px 0;
+        transition: .3s;
+    }
+
+    .links a:hover {
+        color: #fff;
+    }
+
+    .back-btn {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .back-btn a {
+        color: #90e0ff;
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    .back-btn a:hover {
+        color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+        .login-box {
+            width: 90%;
+            padding: 28px;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<div class="login-box">
+    <h2>Login</h2>
+
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <button class="btn" onclick="validateLogin()">Login</button>
+
+    <div class="error-msg" id="error">Please fill details</div>
+
+    <!-- Links Section -->
+    <div class="links">
+        <a href="#">Forgot Password?</a>
+        <a href="signup1.html">Don’t have an account? Sign Up</a>
+    </div>
+
+    <div class="back-btn">
+        <a href="./home2.html">⬅ Back to Home</a>
+    </div>
+</div>
+
+
+<script>
+function validateLogin() {
+    let user = document.getElementById("username").value.trim();
+    let pass = document.getElementById("password").value.trim();
+    let error = document.getElementById("error");
+
+    if (user === "" || pass === "") {
+        error.style.display = "block";
+    } else {
+        window.location.href = "404.html";
+    }
+}
+</script>
+
+</body>
+</html>
