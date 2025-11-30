@@ -288,75 +288,67 @@
 <script src="main.js"></script>
 
 
-</body>
-</html>
-<!-- <footer> -->
-  <footer class="footer">
-    <div class="footer-container">
 
-        <!-- Logo / About -->
-        <div class="footer-box">
-            <img src="./white.webp" alt="Stackly Logo" class="footer-logo"  style="height:60px;">
 
-           
-            <!-- <p>We deliver secure, scalable and innovative IT services for global businesses.</p><br> -->
 
-            <!-- Social Icons -->
-            <div class="footer-social">
-                <a href="./404.html"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="./404.html"><i class="fa-brands fa-instagram"></i></a>
-                <a href="./404.html"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="./404.html"><i class="fa-brands fa-x-twitter"></i></a>
-            </div>
-        </div>
 
-        <!-- Quick Links -->
-        <div class="footer-box">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="./index.html">Home 1</a></li>
-                <li><a href="./services.html">Services</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./projects.html">Projects</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </div>
+<script>
+  // Bar Chart
+  const barCtx = document.getElementById('barChart').getContext('2d');
+  const barChart = new Chart(barCtx, {
+    type:'bar',
+    data:{
+      labels:['HR','IT','Finance','Sales','Marketing'],
+      datasets:[{
+        label:'Tickets',
+        data:[12,19,8,15,10],
+        backgroundColor:['#FF6384','#36A2EB','#FFCE56','#4BC0C0','#9966FF'],
+        borderRadius:5
+      }]
+    },
+    options:{
+      responsive:true,
+      plugins:{
+        legend:{display:false}
+      },
+      scales:{y:{beginAtZero:true}}
+    }
+  });
 
-        <!-- Address -->
-        <div class="footer-box">
-            <h3>Our Address</h3>
-            <p>
-                MMR complex.<br>
-                chinna tirupathi kovil street,<br>
-                salem,Tamil nadu-636008<br>
-                <!-- Bengaluru, Karnataka – 560066<br> -->
-                India<br><br>
+  // Pie Chart
+  const pieCtx = document.getElementById('pieChart').getContext('2d');
+  const pieChart = new Chart(pieCtx,{
+    type:'pie',
+    data:{
+      labels:['Resolved','Pending','In Progress'],
+      datasets:[{
+        data:[60,25,15],
+        backgroundColor:['#36A2EB','#FFCE56','#FF6384']
+      }]
+    },
+    options:{responsive:true}
+  });
 
-                <strong>Phone:</strong> +91 98765 43210<br>
-                <strong>Email:</strong> support@thestackly.com
-            </p>
-        </div>
-
-        <!-- Google Map -->
-        <div class="footer-box">
-            <h3>Location</h3>
-            <iframe 
-            src="https://www.google.com/maps?q=Salem%20Tamil%20Nadu&output=embed"
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-        <p>© 2025 stackly | All Rights Reserved</p>
-    </div>
-</footer>
-
-<!-- Script -->
-<script src="main.js"></script>
+  // Line Chart
+  const lineCtx = document.getElementById('lineChart').getContext('2d');
+  const lineChart = new Chart(lineCtx,{
+    type:'line',
+    data:{
+      labels:['Jan','Feb','Mar','Apr','May','Jun','Jul'],
+      datasets:[{
+        label:'Tickets',
+        data:[12,19,10,15,22,18,25],
+        borderColor:'#36A2EB',
+        backgroundColor:'rgba(54,162,235,0.2)',
+        tension:0.4,
+        fill:true,
+        pointBackgroundColor:'#36A2EB',
+        pointRadius:5
+      }]
+    },
+    options:{responsive:true}
+  });
+</script>
 
 
 </body>
