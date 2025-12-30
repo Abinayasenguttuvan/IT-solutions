@@ -21,7 +21,7 @@ ul { list-style: none; }
 .header {
     width: 100%;
     padding: 18px 40px;
-    background: #0b1f3a;
+    background:#2a3603;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -99,7 +99,7 @@ li a{
 
 /* ================= FOOTER ================= */
 .footer {
-    background: #0b1f3a;
+    background:#2a3603;
     padding-top: 40px;
     color: white;
 }
@@ -145,7 +145,7 @@ li a{
 
 .footer-bottom {
     text-align: center;
-    background: #08192e;
+    background: #2a3603;
     padding: 15px 0;
 }
 
